@@ -1,0 +1,31 @@
+---
+import Social from "./Social.astro";
+---
+
+<footer>
+    <h2>Check my social media</h2>
+    <div>
+        <Social platform="github" username="KrzysiekWorwa" /><Social
+            platform="linkedin"
+            username="in/krzysztof-worwa-5462b8242"
+        />
+        <a href="https://codifystudio.pl/">Codify</a>
+    </div>
+
+    <style>
+        footer {
+            margin-top: 2rem;
+        }
+        div {
+            display: flex;
+            gap: 1rem;
+        }
+        a {
+            padding: 0.5rem 1rem;
+            color: white;
+            background-color: teal;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</footer>
