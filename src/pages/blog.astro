@@ -1,29 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
+import BlogPost from "../components/BlogPost.astro"
+const allPosts = Object.values(
+    import.meta.glob("./posts/*.md", { eager: true }),
+);
 const pageTitle = "My Astro Learning Blog";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <h2>This is where I will post about my journey learning Astro</h2>
     <ul>
-        <li>
-            <a href="/blog-astro-tailwindcss/posts/post-1/">Post 1</a>
-            <a href="/blog-astro-tailwindcss/posts/post-2/">Post 2</a>
-            <a href="/blog-astro-tailwindcss/posts/post-3/">Post 3</a>
-        </li>
+        {
+            allPosts.map((post: any) => (
+                <BlogPost url={post.url} title={post.frontmatter.title} />
+            ))
+        }
     </ul>
 </BaseLayout>
-<style>
-    a {
-        padding: 0.5rem 1rem;
-        color: white;
-        background-color: teal;
-        text-decoration: none;
-        border-radius: 4px;
-    }
-
-    ul {
-        list-style-type: none;
-    }
-</style>
