@@ -1,5 +1,5 @@
 html {
-  background-color: #f1f5f9;
+  background-color: #ddd;
   font-family: sans-serif;
 }
 
@@ -21,7 +21,7 @@ h1 {
 }
 
 html.dark {
-  background-color: #0d0950;
+  background-color: #252525;
   color: #fff;
 }
 
@@ -32,7 +32,7 @@ html.dark {
 
 .dark .nav-links a:hover,
 .dark .nav-links a:focus {
-  color: #0d0950;
+  color: #ddd;
 }
 
 .dark .nav-links a {
@@ -40,7 +40,7 @@ html.dark {
 }
 
 .dark a {
-  color: #ff9776;
+  color: #ffffff;
 }
 
 /* nav styles */
